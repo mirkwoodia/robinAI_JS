@@ -25,7 +25,7 @@ rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: commands })
 	try {
 		console.log('Started refreshing application (/) commands.');
 
-		await rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: commands });
+		await rest.put(Routes.applicationCommands(clientId), { body: commands });
 
 		console.log('Successfully reloaded application (/) commands.');
 	} catch (error) {
